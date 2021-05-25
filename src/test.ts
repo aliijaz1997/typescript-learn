@@ -34,3 +34,17 @@ calculator = (number1: number, number2: number, operation: string) => {
 }
 
 console.log(calculator(2,3,"addition"));
+
+const filter = <T>(callbackFn : (element: T, index: number) => boolean, arr: T[]) : T[] => {
+    let i : number;
+    let newArray: T[]= [];
+    for (i=0; i<= arr.length; i++) {
+        const result = callbackFn(arr[i], i);
+        if (result) newArray.push(arr[i]);
+    }
+
+    return newArray;
+}
+
+const functionResult = filter((item)=> item === "Ali", ["Ali", "Ahmed", "Mehmood", "Hamid"])
+console.log("The output of the filter function is = ", functionResult);

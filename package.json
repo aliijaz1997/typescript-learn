@@ -4,6 +4,7 @@
   "description": "",
   "main": "typescript-basic.js",
   "scripts": {
+    "start" : "tsc && node public/test.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
